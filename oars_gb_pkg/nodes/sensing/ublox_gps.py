@@ -33,8 +33,8 @@ class ublox(object):
 
     def publish_position(self):
         #Uses a Point32 type to save the gps position, x is longitude, y is latitude, z is always set to zero
-    	pub = rospy.Publisher('/boat/position',Point32, queue_size=0)
-    	rospy.init_node('/boat/position', anonymous = True)
+    	pub = rospy.Publisher('position',Point32, queue_size=0)
+    	rospy.init_node('position', anonymous = True)
     	rate = rospy.Rate(10) # 10hz
     	while not rospy.is_shutdown():
             #repeats the process in the init function over and over again
